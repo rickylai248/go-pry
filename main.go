@@ -18,6 +18,7 @@ func main() {
 
 	// Catch Ctrl-C
 	c := make(chan os.Signal, 1)
+	// := short assignment statement can be used in place of a var declaration with implicit type.
 	signal.Notify(c, os.Interrupt)
 	go func() {
 		for _ = range c {
